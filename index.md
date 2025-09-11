@@ -1,27 +1,35 @@
 ---
-layout: home
+layout: single
 author_profile: true
 ---
 
 # Welcome to My Personal Website
 
-Hello! I'm Calca, and this is my personal space on the web. Here you'll find information about me, my projects, and my thoughts on various topics.
+Hello! I'm Calca, and this is my personal space on the web. 
 
-## About This Site
+## About Me
 
-This website is built using Jekyll and hosted on GitHub Pages. It uses the Minimal Mistakes theme to provide a clean, responsive design that works well across all devices.
+I'm passionate about technology, development, and sharing knowledge with others. I enjoy working on various projects and exploring new technologies. This website serves as a place where I can share my experiences and connect with like-minded individuals.
 
-## What You'll Find Here
+### My Interests
 
-- **About Me**: Learn more about my background, interests, and experience
-- **Projects**: Explore some of the projects I've worked on
-- **Blog Posts**: Read my thoughts on technology, development, and life
-- **Contact**: Get in touch with me
+- **Software Development**: I love creating solutions to interesting problems
+- **Open Source**: Contributing to and learning from the open source community  
+- **Technology**: Staying up-to-date with the latest trends and innovations
+- **Learning**: Continuously expanding my knowledge and skills
 
-## Recent Updates
+## Connect With Me
 
-This site is regularly updated with new content. Check back often to see what's new!
+I'm always interested in connecting with fellow developers and technology enthusiasts. You can find me on:
+
+- **[GitHub](https://github.com/calca)** - Check out my projects and contributions
+- **[Buy Me a Coffee](https://www.buymeacoffee.com/calca)** - Support my work if you find it helpful
+- **[Instagram](https://www.instagram.com/calca)** - Follow my personal journey
+
+## This Website
+
+This personal website is built with Jekyll using the Minimal Mistakes theme and hosted on GitHub Pages. It provides a clean, responsive design that works well across all devices.
 
 ---
 
-Feel free to explore and don't hesitate to reach out if you'd like to connect!
+Thanks for visiting and feel free to reach out!

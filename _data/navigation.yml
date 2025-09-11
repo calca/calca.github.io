@@ -2,9 +2,9 @@
 main:
   - title: "Home"
     url: /
-  - title: "About"
-    url: /about/
-  - title: "Posts"
-    url: /posts/
   - title: "GitHub"
     url: https://github.com/calca
+  - title: "Buy Me a Coffee"
+    url: https://www.buymeacoffee.com/calca
+  - title: "Instagram"
+    url: https://www.instagram.com/calca

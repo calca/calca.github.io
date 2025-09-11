@@ -1,0 +1,10 @@
+# Navigation Links
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Posts"
+    url: /posts/
+  - title: "GitHub"
+    url: https://github.com/calca

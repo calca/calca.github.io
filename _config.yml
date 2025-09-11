@@ -1,0 +1,57 @@
+# Site Configuration
+title: "Calca's Personal Website"
+email: calca@example.com
+description: >-
+  Welcome to my personal website. This is a place where I share my thoughts,
+  projects, and experiences.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://calca.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+
+# Theme settings
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Reading Files
+include:
+  - .htaccess
+
+# Site Author
+author:
+  name: "Calca"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Welcome to my personal space on the web"
+  location: "Somewhere on Earth"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/calca"
+    - label: "Buy Me a Coffee"
+      icon: "fas fa-fw fa-coffee"
+      url: "https://www.buymeacoffee.com/calca"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/calca"
+
+# Defaults
+defaults: []
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

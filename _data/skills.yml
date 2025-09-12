@@ -1,0 +1,28 @@
+# Technical Skills for Mobile App Development
+
+mobile_platforms:
+  - name: "iOS Development"
+    icon: "ri-apple-line"
+    technologies: ["Swift", "Objective-C", "Xcode", "Core Data", "UIKit", "SwiftUI"]
+    
+  - name: "Android Development"  
+    icon: "ri-android-line"
+    technologies: ["Kotlin", "Java", "Android Studio", "Jetpack Compose", "Room", "MVVM"]
+
+cross_platform:
+  - name: "React Native"
+    icon: "ri-reactjs-line"
+    technologies: ["React Native", "JavaScript", "TypeScript", "Redux", "Expo"]
+    
+  - name: "Flutter"
+    icon: "ri-flutter-line"
+    technologies: ["Dart", "Flutter SDK", "BLoC Pattern", "Provider", "Firebase"]
+
+backend_cloud:
+  - name: "Backend Services"
+    icon: "ri-cloud-line"
+    technologies: ["Firebase", "AWS", "Node.js", "REST APIs", "GraphQL", "MongoDB"]
+    
+  - name: "Development Tools"
+    icon: "ri-tools-line"
+    technologies: ["Git", "CI/CD", "TestFlight", "Google Play Console", "Figma", "Postman"]

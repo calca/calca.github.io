@@ -1,0 +1,49 @@
+# Mobile App Projects Portfolio
+
+featured:
+  - name: "TaskMaster Pro"
+    description: "A comprehensive task management app with team collaboration features, offline sync, and advanced analytics."
+    image: "/assets/images/projects/taskmaster.png"
+    technologies: ["Swift", "Core Data", "CloudKit", "Charts"]
+    platforms: ["iOS", "Apple Watch"]
+    app_store: "https://apps.apple.com/app/taskmaster-pro/id123456"
+    github: "https://github.com/calca/taskmaster-pro"
+    status: "Live"
+    downloads: "10K+"
+    rating: 4.8
+    
+  - name: "FitTracker"
+    description: "Cross-platform fitness tracking app with personalized workout plans, nutrition tracking, and social features."
+    image: "/assets/images/projects/fittracker.png"
+    technologies: ["React Native", "Firebase", "TypeScript", "Redux"]
+    platforms: ["iOS", "Android"]
+    app_store: "https://apps.apple.com/app/fittracker/id789012"
+    play_store: "https://play.google.com/store/apps/details?id=com.calca.fittracker"
+    status: "Live"
+    downloads: "25K+"
+    rating: 4.6
+
+  - name: "ExpenseFlow"
+    description: "Smart expense tracking app with AI-powered categorization, budget planning, and financial insights."
+    image: "/assets/images/projects/expenseflow.png"
+    technologies: ["Flutter", "Dart", "SQLite", "ML Kit"]
+    platforms: ["iOS", "Android", "Web"]
+    app_store: "https://apps.apple.com/app/expenseflow/id345678"
+    play_store: "https://play.google.com/store/apps/details?id=com.calca.expenseflow"
+    web_app: "https://expenseflow.app"
+    status: "Live"
+    downloads: "15K+"
+    rating: 4.7
+
+other_projects:
+  - name: "WeatherWise"
+    description: "Beautiful weather app with detailed forecasts and weather alerts."
+    technologies: ["SwiftUI", "Combine", "Weather API"]
+    platforms: ["iOS"]
+    status: "In Development"
+    
+  - name: "LocalBites"
+    description: "Food delivery app connecting users with local restaurants."
+    technologies: ["Kotlin", "Jetpack Compose", "Google Maps API"]
+    platforms: ["Android"]
+    status: "Beta Testing"

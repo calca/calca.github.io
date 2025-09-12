@@ -21,7 +21,7 @@ $heading-font: 'Arial', sans-serif;
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 html {
@@ -55,7 +55,7 @@ body {
   color: $white;
   text-align: center;
   padding: 60px 0;
-  flex: 1;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,6 +98,16 @@ body {
     opacity: 0.9;
     font-weight: 300;
   }
+  
+  .job-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    font-weight: 400;
+    color: $accent-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
   .social-links {
     display: flex;
@@ -125,6 +135,331 @@ body {
         margin-right: 6px;
         font-size: 18px;
       }
+    }
+  }
+}
+
+// Skills Section
+.skills {
+  background: $light-bg;
+  padding: 80px 0;
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: $primary-color;
+    font-weight: 300;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skill-category {
+    background: $white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    i {
+      font-size: 2rem;
+      color: $accent-color;
+      margin-right: 15px;
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      color: $text-color;
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-tag {
+    background: rgba(156, 77, 204, 0.1);
+    color: $primary-color;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(156, 77, 204, 0.2);
+  }
+}
+
+// Projects Section  
+.projects {
+  padding: 80px 0;
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: $primary-color;
+    font-weight: 300;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .project-image {
+    height: 200px;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .project-content {
+    padding: 30px;
+    
+    h3 {
+      font-size: 1.5rem;
+      color: $text-color;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    p {
+      color: rgba(46, 16, 101, 0.8);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+  }
+  
+  .project-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.9rem;
+      color: $text-color;
+      
+      i {
+        color: $accent-color;
+      }
+    }
+    
+    .status {
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      
+      &.live {
+        background: rgba(76, 175, 80, 0.1);
+        color: #4CAF50;
+      }
+      
+      &.in-development {
+        background: rgba(255, 193, 7, 0.1);
+        color: #FFC107;
+      }
+      
+      &.beta-testing {
+        background: rgba(33, 150, 243, 0.1);
+        color: #2196F3;
+      }
+    }
+  }
+  
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+  
+  .tech-tag {
+    background: rgba(49, 27, 146, 0.1);
+    color: $primary-color;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: $primary-color;
+    color: $white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+      background: $secondary-color;
+      transform: scale(1.05);
+    }
+    
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Contact Section
+.contact {
+  background: $light-bg;
+  padding: 80px 0;
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: $primary-color;
+    font-weight: 300;
+  }
+  
+  .contact-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(46, 16, 101, 0.8);
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  
+  .contact-methods {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background: $white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    i {
+      font-size: 2.5rem;
+      color: $accent-color;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    
+    .contact-details {
+      h3 {
+        font-size: 1.2rem;
+        color: $text-color;
+        margin: 0 0 5px 0;
+        font-weight: 600;
+      }
+      
+      p {
+        color: rgba(46, 16, 101, 0.7);
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .availability {
+    position: sticky;
+    top: 20px;
+  }
+  
+  .availability-card {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: $white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(49, 27, 146, 0.3);
+    
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    p {
+      opacity: 0.9;
+      line-height: 1.6;
+      margin: 0;
     }
   }
 }
@@ -185,6 +520,45 @@ body {
   .section-title {
     font-size: 2rem !important;
   }
+  
+  .skills {
+    padding: 60px 0;
+    
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .skill-category {
+      padding: 25px;
+    }
+  }
+  
+  .projects {
+    padding: 60px 0;
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .project-content {
+      padding: 25px;
+    }
+  }
+  
+  .contact {
+    padding: 60px 0;
+    
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .availability {
+      position: static;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -223,5 +597,60 @@ body {
 
   .section-title {
     font-size: 1.8rem !important;
+  }
+  
+  .skills {
+    padding: 40px 0;
+    
+    .skill-category {
+      padding: 20px;
+    }
+    
+    .skill-header {
+      i {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  
+  .projects {
+    padding: 40px 0;
+    
+    .project-content {
+      padding: 20px;
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+    
+    .project-links {
+      flex-direction: column;
+    }
+  }
+  
+  .contact {
+    padding: 40px 0;
+    
+    .contact-method {
+      padding: 20px;
+      
+      i {
+        font-size: 2rem;
+        margin-right: 15px;
+      }
+      
+      .contact-details h3 {
+        font-size: 1.1rem;
+      }
+    }
+    
+    .availability-card {
+      padding: 25px;
+    }
   }
 }

@@ -1,0 +1,25 @@
+# Contact Information
+
+contact_info:
+  title: "Let's Build Something Amazing Together"
+  subtitle: "Ready to bring your mobile app idea to life? I'd love to hear from you."
+  
+  methods:
+    - icon: "ri-mail-line"
+      label: "Email"
+      value: "gianluigi.calcaterra@gmail.com"
+      link: "mailto:gianluigi.calcaterra@gmail.com"
+      
+    - icon: "ri-linkedin-line"
+      label: "LinkedIn"
+      value: "Connect with me"
+      link: "https://linkedin.com/in/gianluigi-calcaterra"
+      
+    - icon: "ri-github-line"
+      label: "GitHub"
+      value: "View my code"
+      link: "https://github.com/calca"
+      
+  availability:
+    status: "Available for new projects"
+    description: "Currently accepting freelance and contract opportunities for mobile app development projects."

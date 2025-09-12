@@ -1,10 +1,10 @@
 // Modern, clean one-page theme styles
 
-// Color scheme
-$primary-color: #2c3e50;
-$secondary-color: #3498db;
-$accent-color: #e74c3c;
-$text-color: #2c3e50;
+// Color scheme - Dark Purple Theme
+$primary-color: #311b92;
+$secondary-color: #512da8;
+$accent-color: #9c4dcc;
+$text-color: #2e1065;
 $light-bg: #f8f9fa;
 $white: #ffffff;
 
@@ -47,7 +47,7 @@ body {
 // Header section
 .hero {
   background: 
-    linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%),
+    linear-gradient(135deg, rgba(49, 27, 146, 0.8) 0%, rgba(81, 45, 168, 0.8) 100%),
     url('../images/hero-bg.svg');
   background-size: cover;
   background-position: center;

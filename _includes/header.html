@@ -1,6 +1,11 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
+      <!-- Gravatar image -->
+      <div class="avatar-container">
+        <img src="https://www.gravatar.com/avatar/05a91fa7e105f36829e1c4353843ff0b?s=150&d=identicon" 
+             alt="Gravatar" class="gravatar-avatar">
+      </div>
       <h1>{{ site.author.name | default: site.title }}</h1>
       <p class="subtitle">{{ site.author.bio | default: site.description }}</p>
       

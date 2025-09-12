@@ -1,6 +1,6 @@
 # Site Configuration
 title: "Calca's Personal Website"
-email: calca@example.com
+email: gianluigi.calcaterra@gmail.com
 description: >-
   Welcome to my personal website. This is a place where I share my thoughts,
   projects, and experiences.
@@ -25,14 +25,17 @@ author:
   location: "Somewhere on Earth"
   links:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "ri-github-line"
       url: "https://github.com/calca"
     - label: "Buy Me a Coffee"
-      icon: "fas fa-fw fa-coffee"
+      icon: "ri-cup-line"
       url: "https://www.buymeacoffee.com/calca"
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/calca"
+      icon: "ri-instagram-line"
+      url: "https://www.instagram.com/calca80"
+    - label: "Email"
+      icon: "ri-mail-line"
+      url: "mailto:gianluigi.calcaterra@gmail.com"
 
 # Defaults
 defaults: []

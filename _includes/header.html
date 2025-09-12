@@ -6,14 +6,24 @@
         <img src="https://www.gravatar.com/avatar/05a91fa7e105f36829e1c4353843ff0b?s=150&d=identicon" 
              alt="Gravatar" class="gravatar-avatar">
       </div>
-      <h1>{{ site.author.name | default: site.title }}</h1>
+      <h1>{{ site.title }}</h1>
       <p class="subtitle">{{ site.author.bio | default: site.description }}</p>
+      
+      <!-- About Me content -->
+      <div class="about-content">
+        <p>{{ site.description }}</p>
+        <p>I'm passionate about technology, development, and sharing knowledge with the community. 
+        Feel free to explore my work and connect with me through the links below.</p>
+      </div>
       
       <!-- Social Links -->
       <div class="social-links">
         {% for link in site.author.links %}
         <a href="{{ link.url }}" class="social-link" target="_blank" rel="noopener noreferrer">
           <i class="{{ link.icon }}"></i>
+          <span class="icon-fallback" style="display: none;">
+            {% if link.label == "GitHub" %}⚡{% elsif link.label == "Instagram" %}📷{% elsif link.label == "Buy Me a Coffee" %}☕{% elsif link.label == "Email" %}✉️{% endif %}
+          </span>
           {{ link.label }}
         </a>
         {% endfor %}

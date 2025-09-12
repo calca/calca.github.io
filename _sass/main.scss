@@ -1,16 +1,17 @@
 // Modern, clean one-page theme styles
 
-// Color scheme - Dark Purple Theme
-$primary-color: #311b92;
-$secondary-color: #512da8;
-$accent-color: #9c4dcc;
-$text-color: #2e1065;
-$light-bg: #f8f9fa;
+// Color scheme - Dark Grey Theme
+$primary-color: #2a2a2a;
+$secondary-color: #3a3a3a;
+$accent-color: #6c6c6c;
+$text-color: #e0e0e0;
+$light-bg: #1a1a1a;
 $white: #ffffff;
+$dark-bg: #121212;
 
 // Typography
-$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$heading-font: 'Arial', sans-serif;
+$font-family: 'Roboto Mono', monospace;
+$heading-font: 'Roboto Mono', monospace;
 
 // Base styles
 * {
@@ -21,7 +22,6 @@ $heading-font: 'Arial', sans-serif;
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 html {
@@ -32,9 +32,15 @@ body {
   font-family: $font-family;
   line-height: 1.6;
   color: $text-color;
-  background: $white;
+  background: $dark-bg;
   display: flex;
   flex-direction: column;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 // Container
@@ -46,16 +52,11 @@ body {
 
 // Header section
 .hero {
-  background: 
-    linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(64, 64, 64, 0.6) 100%),
-    url('../images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   color: $white;
   text-align: center;
-  padding: 60px 0 30px 0;
-  flex: 1;
+  padding: 60px 0 60px 0; // Ensure adequate bottom padding
+  min-height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -67,7 +68,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 60px - 30px - 80px); // viewport minus hero padding minus footer height
+    min-height: calc(100vh - 120px); // viewport minus hero padding
+    padding-bottom: 40px; // Extra bottom padding to ensure buttons don't touch edge
   }
 
   .avatar-container {
@@ -75,62 +77,184 @@ body {
     margin-bottom: 30px;
 
     .gravatar-avatar {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 5px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease;
+      backdrop-filter: blur(5px);
 
       &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        transform: scale(1.08);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.6);
       }
     }
   }
 
   h1 {
     font-family: $heading-font;
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: -1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 40px;
-    opacity: 0.9;
+    opacity: 0.95;
     font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    line-height: 1.5;
   }
 
   .social-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
     max-width: 300px;
-    margin: auto 0 0 0; // Push to bottom with top auto margin
+    margin: auto 0 30px 0; // Push to bottom but keep 30px padding at bottom
     text-align: left;
 
     .social-link {
       display: inline-flex;
       align-items: center;
-      padding: 8px 12px;
+      padding: 12px 16px;
       color: $white;
       text-decoration: none;
       font-weight: 500;
-      transition: opacity 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      min-width: 200px;
 
       &:hover {
-        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
 
       i {
-        margin-right: 6px;
-        font-size: 18px;
+        margin-right: 10px;
+        font-size: 20px;
+        width: 24px;
+        text-align: center;
       }
     }
+  }
+}
+
+// Main content sections
+.main-content {
+  background: $dark-bg;
+  flex: 1;
+}
+
+.about-section, .interests-section {
+  padding: 60px 0;
+  animation: slideInUp 0.8s ease-out;
+  animation-fill-mode: both;
+  
+    .section-title {
+      font-family: $heading-font;
+      font-size: 2.5rem;
+      text-align: center;
+      color: $white;
+      margin-bottom: 40px;
+      font-weight: 600;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: $accent-color;
+        border-radius: 2px;
+      }
+    }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: $white;
+  
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.interests-section {
+  background: $light-bg;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.interest-card {
+  background: $secondary-color;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(108, 108, 108, 0.3);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: $accent-color;
+  }
+  
+  i {
+    font-size: 3rem;
+    color: $accent-color;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  h3 {
+    font-family: $heading-font;
+    font-size: 1.4rem;
+    color: $white;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  p {
+    color: $text-color;
+    line-height: 1.6;
+    opacity: 0.8;
   }
 }
 
@@ -151,8 +275,11 @@ body {
 // Responsive design
 @media (max-width: 768px) {
   .hero {
-    padding: 30px 0;
-    background-attachment: scroll; // Fixed attachment can cause issues on mobile
+    padding: 30px 0 40px 0; // Increase bottom padding on mobile
+    
+    .hero-content {
+      padding-bottom: 20px; // Adjust hero content padding for mobile
+    }
     
     .avatar-container {
       margin-bottom: 20px;
@@ -174,13 +301,34 @@ body {
 
     .social-links {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      margin: auto 0 20px 0; // Ensure bottom margin on mobile
 
       .social-link {
-        padding: 6px 10px;
+        padding: 10px 16px;
+        min-width: 180px;
+        justify-content: center;
       }
     }
+  }
+
+  .about-section, .interests-section {
+    padding: 40px 0;
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .interest-card {
+    padding: 30px 20px;
   }
 
   .footer {
@@ -198,7 +346,11 @@ body {
   }
 
   .hero {
-    padding: 20px 0;
+    padding: 20px 0 30px 0; // Ensure bottom padding on small screens
+    
+    .hero-content {
+      padding-bottom: 15px; // Adjust for very small screens
+    }
     
     .avatar-container {
       margin-bottom: 15px;

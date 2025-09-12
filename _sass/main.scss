@@ -1,12 +1,13 @@
 // Modern, clean one-page theme styles
 
-// Color scheme - Dark Purple Theme
-$primary-color: #311b92;
-$secondary-color: #512da8;
-$accent-color: #9c4dcc;
-$text-color: #2e1065;
-$light-bg: #f8f9fa;
+// Color scheme - Dark Grey Theme
+$primary-color: #2a2a2a;
+$secondary-color: #3a3a3a;
+$accent-color: #6c6c6c;
+$text-color: #e0e0e0;
+$light-bg: #1a1a1a;
 $white: #ffffff;
+$dark-bg: #121212;
 
 // Typography
 $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,7 +32,7 @@ body {
   font-family: $font-family;
   line-height: 1.6;
   color: $text-color;
-  background: $white;
+  background: $dark-bg;
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.8s ease-in;
@@ -51,12 +52,7 @@ body {
 
 // Header section
 .hero {
-  background: 
-    linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(64, 64, 64, 0.6) 100%),
-    url('../images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   color: $white;
   text-align: center;
   padding: 60px 0 30px 0;
@@ -156,7 +152,7 @@ body {
 
 // Main content sections
 .main-content {
-  background: $light-bg;
+  background: $dark-bg;
   flex: 1;
 }
 
@@ -165,27 +161,27 @@ body {
   animation: slideInUp 0.8s ease-out;
   animation-fill-mode: both;
   
-  .section-title {
-    font-family: $heading-font;
-    font-size: 2.5rem;
-    text-align: center;
-    color: $primary-color;
-    margin-bottom: 40px;
-    font-weight: 600;
-    position: relative;
-    
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: $accent-color;
-      border-radius: 2px;
+    .section-title {
+      font-family: $heading-font;
+      font-size: 2.5rem;
+      text-align: center;
+      color: $white;
+      margin-bottom: 40px;
+      font-weight: 600;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: $accent-color;
+        border-radius: 2px;
+      }
     }
-  }
 }
 
 @keyframes slideInUp {
@@ -213,7 +209,7 @@ body {
 }
 
 .interests-section {
-  background: $white;
+  background: $light-bg;
 }
 
 .interests-grid {
@@ -225,17 +221,17 @@ body {
 }
 
 .interest-card {
-  background: $white;
+  background: $secondary-color;
   padding: 40px 30px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  border: 1px solid rgba(49, 27, 146, 0.1);
+  border: 1px solid rgba(108, 108, 108, 0.3);
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     border-color: $accent-color;
   }
   
@@ -249,7 +245,7 @@ body {
   h3 {
     font-family: $heading-font;
     font-size: 1.4rem;
-    color: $primary-color;
+    color: $white;
     margin-bottom: 15px;
     font-weight: 600;
   }
@@ -279,7 +275,6 @@ body {
 @media (max-width: 768px) {
   .hero {
     padding: 30px 0;
-    background-attachment: scroll; // Fixed attachment can cause issues on mobile
     
     .avatar-container {
       margin-bottom: 20px;

@@ -81,10 +81,10 @@ body {
 
   .social-links {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px;
     margin: 0 auto;
 
     .social-link {
@@ -138,9 +138,9 @@ body {
     }
 
     .social-links {
-      flex-direction: row;
-      justify-content: center;
-      gap: 15px;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
 
       .social-link {
         padding: 6px 10px;

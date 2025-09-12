@@ -1,0 +1,11 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>{{ site.author.name | default: site.title }}</h1>
+      <p class="subtitle">{{ site.author.bio | default: site.description }}</p>
+      {% if site.author.location %}
+      <p class="bio">{{ site.author.location }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

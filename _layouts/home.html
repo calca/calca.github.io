@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+  
+  <main>
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="social">
+      <div class="container">
+        <h2 class="section-title">Connect With Me</h2>
+        <div class="social-links">
+          {% for link in site.author.links %}
+          <a href="{{ link.url }}" class="social-link {% if link.label == 'GitHub' %}github{% elsif link.label == 'Buy Me a Coffee' %}coffee{% elsif link.label == 'Instagram' %}instagram{% endif %}" target="_blank" rel="noopener noreferrer">
+            {% if link.icon %}
+            <i class="{{ link.icon }} icon"></i>
+            {% endif %}
+            {{ link.label }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  {% include footer.html %}
+</body>
+</html>

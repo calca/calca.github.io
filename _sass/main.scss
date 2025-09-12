@@ -1,0 +1,252 @@
+// Modern, clean one-page theme styles
+
+// Color scheme
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$text-color: #2c3e50;
+$light-bg: #f8f9fa;
+$white: #ffffff;
+
+// Typography
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$heading-font: 'Arial', sans-serif;
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  line-height: 1.6;
+  color: $text-color;
+  background: $white;
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Header section
+.hero {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $white;
+  text-align: center;
+  padding: 100px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  h1 {
+    font-family: $heading-font;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+
+  .bio {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// About section
+.about {
+  padding: 80px 0;
+  background: $light-bg;
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 50px;
+    font-weight: 300;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      
+      h3 {
+        color: $secondary-color;
+        margin: 30px 0 15px 0;
+        font-size: 1.3rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          margin: 10px 0;
+          padding-left: 30px;
+          position: relative;
+
+          &::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: $secondary-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Social links section
+.social {
+  padding: 80px 0;
+  background: $white;
+  text-align: center;
+
+  .section-title {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 50px;
+    font-weight: 300;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 25px;
+      background: $primary-color;
+      color: $white;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      min-width: 150px;
+      justify-content: center;
+
+      &:hover {
+        background: $secondary-color;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+
+      .icon {
+        margin-right: 8px;
+        font-size: 1.2rem;
+      }
+
+      &.github { 
+        background: #333; 
+        &:hover { background: #24292e; }
+      }
+      &.coffee { 
+        background: #ff813f; 
+        &:hover { background: #ff6f28; }
+      }
+      &.instagram { 
+        background: #e4405f; 
+        &:hover { background: #d62448; }
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: $primary-color;
+  color: $white;
+  text-align: center;
+  padding: 40px 0;
+
+  p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+    }
+
+    .bio {
+      font-size: 1rem;
+    }
+  }
+
+  .about, .social {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+
+    .social-link {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+}

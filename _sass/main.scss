@@ -82,7 +82,7 @@ body {
   .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
     max-width: 600px;
     margin: 0 auto;
@@ -90,42 +90,19 @@ body {
     .social-link {
       display: inline-flex;
       align-items: center;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 12px;
       color: $white;
       text-decoration: none;
-      border-radius: 50px;
-      transition: all 0.3s ease;
       font-weight: 500;
-      min-width: 120px;
-      justify-content: center;
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: opacity 0.3s ease;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        border-color: rgba(255, 255, 255, 0.4);
+        opacity: 0.8;
       }
 
-      .favicon {
-        margin-right: 8px;
-        width: 16px;
-        height: 16px;
-        border-radius: 2px;
-      }
-
-      &.github:hover { 
-        background: #333; 
-        border-color: #333;
-      }
-      &.coffee:hover { 
-        background: #ff813f; 
-        border-color: #ff813f;
-      }
-      &.instagram:hover { 
-        background: #e4405f; 
-        border-color: #e4405f;
+      i {
+        margin-right: 6px;
+        font-size: 18px;
       }
     }
   }
@@ -161,13 +138,12 @@ body {
     }
 
     .social-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
 
       .social-link {
-        width: 180px;
-        min-width: 180px;
+        padding: 6px 10px;
       }
     }
   }
@@ -198,9 +174,7 @@ body {
     }
 
     .social-links .social-link {
-      width: 160px;
-      min-width: 160px;
-      padding: 10px 15px;
+      padding: 6px 8px;
     }
   }
 

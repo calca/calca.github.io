@@ -1,5 +1,5 @@
 # Site Configuration
-title: "Calca's Personal Website"
+title: "Gianluigi Calcaterra"
 email: gianluigi.calcaterra@gmail.com
 description: >-
   Welcome to my personal website. This is a place where I share my thoughts,
@@ -19,7 +19,7 @@ include:
 
 # Site Author
 author:
-  name: "Calca"
+  name: "calca"
   avatar: "/assets/images/avatar.jpg"
   bio: "Welcome to my personal space on the web"
   location: "Somewhere on Earth"

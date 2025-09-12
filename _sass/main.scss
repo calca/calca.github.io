@@ -20,7 +20,6 @@ $heading-font: 'Arial', sans-serif;
 }
 
 html, body {
-  height: 100%;
   overflow-x: hidden;
 }
 
@@ -33,8 +32,6 @@ body {
   line-height: 1.6;
   color: $text-color;
   background: $white;
-  display: flex;
-  flex-direction: column;
 }
 
 // Container

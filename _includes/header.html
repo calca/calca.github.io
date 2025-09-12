@@ -1,0 +1,18 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>{{ site.author.name | default: site.title }}</h1>
+      <p class="subtitle">{{ site.author.bio | default: site.description }}</p>
+      
+      <!-- Social Links -->
+      <div class="social-links">
+        {% for link in site.author.links %}
+        <a href="{{ link.url }}" class="social-link {% if link.label == 'GitHub' %}github{% elsif link.label == 'Buy Me a Coffee' %}coffee{% elsif link.label == 'Instagram' %}instagram{% endif %}" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.google.com/s2/favicons?domain={{ link.url | replace: 'https://', '' | replace: 'http://', '' | split: '/' | first }}&sz=16" alt="{{ link.label }} favicon" class="favicon">
+          {{ link.label }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

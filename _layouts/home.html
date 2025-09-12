@@ -5,6 +5,46 @@
 </head>
 <body>
   {% include header.html %}
+  
+  <main class="main-content">
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>{{ site.description }}</p>
+          <p>I'm passionate about technology, development, and sharing knowledge with the community. 
+          Feel free to explore my work and connect with me through the links above.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="interests-section">
+      <div class="container">
+        <h2 class="section-title">Interests & Skills</h2>
+        <div class="interests-grid">
+          <div class="interest-card">
+            <i class="ri-code-line"></i>
+            <span class="icon-fallback" style="display: none;">💻</span>
+            <h3>Development</h3>
+            <p>Building modern web applications and exploring new technologies</p>
+          </div>
+          <div class="interest-card">
+            <i class="ri-github-line"></i>
+            <span class="icon-fallback" style="display: none;">⚡</span>
+            <h3>Open Source</h3>
+            <p>Contributing to open source projects and sharing knowledge</p>
+          </div>
+          <div class="interest-card">
+            <i class="ri-lightbulb-line"></i>
+            <span class="icon-fallback" style="display: none;">💡</span>
+            <h3>Innovation</h3>
+            <p>Always learning and experimenting with emerging technologies</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
   {% include footer.html %}
 </body>
 </html>

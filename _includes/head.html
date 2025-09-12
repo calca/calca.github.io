@@ -11,6 +11,42 @@
 <!-- Remix Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.0/remixicon.min.css">
 
+<!-- Icon fallback styles -->
+<style>
+  .icon-fallback {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+  }
+</style>
+
+<!-- Icon fallback script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if RemixIcon loaded by testing for a common class
+    const testIcon = document.createElement('i');
+    testIcon.className = 'ri-home-line';
+    testIcon.style.position = 'absolute';
+    testIcon.style.visibility = 'hidden';
+    document.body.appendChild(testIcon);
+    
+    const iconLoaded = window.getComputedStyle(testIcon, ':before').content !== 'none';
+    document.body.removeChild(testIcon);
+    
+    if (!iconLoaded) {
+      // Hide remix icons and show emoji fallbacks
+      document.querySelectorAll('i[class*="ri-"]').forEach(icon => {
+        icon.style.display = 'none';
+      });
+      document.querySelectorAll('.icon-fallback').forEach(fallback => {
+        fallback.style.display = 'inline-block';
+      });
+    }
+  });
+</script>
+
 <!-- SEO meta tags -->
 <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}">
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

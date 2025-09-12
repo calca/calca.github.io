@@ -55,7 +55,7 @@ body {
   background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   color: $white;
   text-align: center;
-  padding: 60px 0 30px 0;
+  padding: 60px 0 60px 0; // Ensure adequate bottom padding
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
@@ -69,6 +69,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: calc(100vh - 120px); // viewport minus hero padding
+    padding-bottom: 40px; // Extra bottom padding to ensure buttons don't touch edge
   }
 
   .avatar-container {
@@ -117,7 +118,7 @@ body {
     align-items: flex-start;
     gap: 12px;
     max-width: 300px;
-    margin: auto 0 0 0; // Push to bottom with top auto margin
+    margin: auto 0 30px 0; // Push to bottom but keep 30px padding at bottom
     text-align: left;
 
     .social-link {
@@ -274,7 +275,11 @@ body {
 // Responsive design
 @media (max-width: 768px) {
   .hero {
-    padding: 30px 0;
+    padding: 30px 0 40px 0; // Increase bottom padding on mobile
+    
+    .hero-content {
+      padding-bottom: 20px; // Adjust hero content padding for mobile
+    }
     
     .avatar-container {
       margin-bottom: 20px;
@@ -299,6 +304,7 @@ body {
       align-items: center;
       gap: 10px;
       max-width: 100%;
+      margin: auto 0 20px 0; // Ensure bottom margin on mobile
 
       .social-link {
         padding: 10px 16px;
@@ -340,7 +346,11 @@ body {
   }
 
   .hero {
-    padding: 20px 0;
+    padding: 20px 0 30px 0; // Ensure bottom padding on small screens
+    
+    .hero-content {
+      padding-bottom: 15px; // Adjust for very small screens
+    }
     
     .avatar-container {
       margin-bottom: 15px;

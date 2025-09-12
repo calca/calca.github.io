@@ -124,6 +124,7 @@ body {
     .social-link {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       padding: 12px 16px;
       color: $white;
       text-decoration: none;
@@ -133,7 +134,7 @@ body {
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
-      min-width: 200px;
+      width: 240px;
 
       &:hover {
         background: rgba(255, 255, 255, 0.2);
@@ -308,7 +309,7 @@ body {
 
       .social-link {
         padding: 10px 16px;
-        min-width: 180px;
+        width: 200px;
         justify-content: center;
       }
     }
@@ -370,7 +371,9 @@ body {
     }
 
     .social-links .social-link {
-      padding: 6px 8px;
+      padding: 8px 12px;
+      width: 180px;
+      justify-content: center;
     }
   }
 

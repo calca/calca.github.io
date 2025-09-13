@@ -2,8 +2,7 @@
 title: "Gianluigi Calcaterra"
 email: gianluigi.calcaterra@gmail.com
 description: >-
-  Welcome to my personal website. This is a place where I share my thoughts,
-  projects, and experiences.
+  My my personal website. This is a place where I share my projects and experiences.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://calca.github.io" # the base hostname & protocol for your site
@@ -21,8 +20,8 @@ include:
 author:
   name: "calca"
   avatar: "/assets/images/avatar.jpg"
-  bio: "Welcome to my personal space on the web"
-  location: "Somewhere on Earth"
+  bio: "Welcome to my personal space"
+  location: "Milan"
   links:
     - label: "GitHub"
       icon: "ri-github-line"
@@ -32,7 +31,7 @@ author:
       url: "https://www.instagram.com/calca80"
     - label: "Buy Me a Coffee"
       icon: "ri-cup-line"
-      url: "https://www.buymeacoffee.com/calca"
+      url: "https://www.buymeacoffee.com/gianluigick"
     - label: "Email"
       icon: "ri-mail-line"
       url: "mailto:gianluigi.calcaterra@gmail.com"

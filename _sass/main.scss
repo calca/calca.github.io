@@ -61,7 +61,7 @@ body {
   padding: 60px 0 60px 0; // Ensure adequate bottom padding
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center; // Changed from flex-start to center for vertical centering
   justify-content: center;
   position: relative;
 
@@ -71,8 +71,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 120px); // viewport minus hero padding
-    padding-bottom: 40px; // Extra bottom padding to ensure buttons don't touch edge
+    justify-content: center; // Center content vertically within the container
+    padding: 20px 0; // Add consistent padding instead of using min-height
   }
 
   .avatar-container {
@@ -121,7 +121,7 @@ body {
     align-items: flex-start;
     gap: 2px;  // Reduced from 12px to bring links closer
     max-width: 300px;
-    margin: auto 0 30px 0; // Push to bottom but keep 30px padding at bottom
+    margin-top: 40px; // Add top margin instead of using auto margins
     text-align: left;
 
     .social-link {
@@ -269,10 +269,10 @@ body {
 // Responsive design
 @media (max-width: 768px) {
   .hero {
-    padding: 30px 0 40px 0; // Increase bottom padding on mobile
+    padding: 40px 0; // Simplified padding for mobile
     
     .hero-content {
-      padding-bottom: 20px; // Adjust hero content padding for mobile
+      padding: 20px 0; // Consistent padding for mobile
     }
     
     .avatar-container {
@@ -298,7 +298,7 @@ body {
       align-items: center;
       gap: 8px;  // Consistent with desktop
       max-width: 100%;
-      margin: auto 0 20px 0; // Ensure bottom margin on mobile
+      margin-top: 30px; // Consistent top margin on mobile
 
       .social-link {
         padding: 8px 14px;  // Consistent proportions
@@ -341,10 +341,10 @@ body {
   }
 
   .hero {
-    padding: 20px 0 30px 0; // Ensure bottom padding on small screens
+    padding: 30px 0; // Simplified padding for small screens
     
     .hero-content {
-      padding-bottom: 15px; // Adjust for very small screens
+      padding: 15px 0; // Consistent padding for small screens
     }
     
     .avatar-container {

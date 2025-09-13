@@ -132,7 +132,7 @@ body {
     .social-link {
       display: inline-flex;
       align-items: left;
-      padding: 8px 12px;  // Slightly reduced padding
+      padding: 4px 8px;  // Minimized padding
       color: $white;
       text-decoration: none;
       font-weight: 400;  // Reduced from 500
@@ -306,7 +306,7 @@ body {
       margin-top: 30px; // Consistent top margin on mobile
 
       .social-link {
-        padding: 8px 14px;  // Consistent proportions
+        padding: 4px 10px;  // Minimized padding for mobile
         min-width: 180px;
         justify-content: left;
         font-size: 0.85rem;  // Slightly smaller on mobile
@@ -370,7 +370,7 @@ body {
     }
 
     .social-links .social-link {
-      padding: 6px 10px;  // Adjusted padding
+      padding: 2px 6px;  // Minimized padding for very small screens
       font-size: 0.8rem;  // Smaller font for very small screens
     }
   }

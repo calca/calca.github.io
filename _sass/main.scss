@@ -98,7 +98,7 @@ body {
 
   h1 {
     font-family: $heading-font;
-    font-size: 3rem;  // Reduced from 4rem for better readability
+    font-size: 2rem;  // Reduced from 4rem for better readability
     margin-bottom: 4px;
     font-weight: 700;
     letter-spacing: -1px;
@@ -106,7 +106,7 @@ body {
   }
 
   .subtitle {
-    font-size: 1.1rem;  // Reduced from 1.4rem for better readability
+    font-size: 0.9rem;  // Reduced from 1.4rem for better readability
     margin-bottom: 40px;
     opacity: 0.95;
     font-weight: 300;
@@ -131,7 +131,7 @@ body {
       color: $white;
       text-decoration: none;
       font-weight: 400;  // Reduced from 500
-      font-size: 0.9rem;  // Smaller font size relative to the page
+      font-size: 0.8rem;  // Smaller font size relative to the page
       min-width: 200px;
       line-height: 1.4;  // Normal line height
 
@@ -194,7 +194,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: $white;
   
@@ -231,7 +231,7 @@ body {
   }
   
   i {
-    font-size: 3rem;
+    font-size: 2rem;
     color: $accent-color;
     margin-bottom: 20px;
     display: block;
@@ -239,7 +239,7 @@ body {
   
   h3 {
     font-family: $heading-font;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: $white;
     margin-bottom: 15px;
     font-weight: 600;
@@ -262,7 +262,7 @@ body {
 
   p {
     opacity: 0.8;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -289,7 +289,7 @@ body {
     }
 
     .subtitle {
-      font-size: 1rem;  // Reduced proportionally
+      font-size: 0.9rem;  // Reduced proportionally
       margin-bottom: 30px;
     }
 

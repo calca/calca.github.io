@@ -2,7 +2,7 @@
 title: "Gianluigi Calcaterra"
 email: gianluigi.calcaterra@gmail.com
 description: >-
-  My my personal website. This is a place where I share my projects and experiences.
+  My personal website. This is a place where I share my projects and experiences.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://calca.github.io" # the base hostname & protocol for your site

@@ -1,13 +1,21 @@
 // Modern, clean one-page theme styles
 
-// Color scheme - Dark Grey Theme
-$primary-color: #2a2a2a;
-$secondary-color: #3a3a3a;
-$accent-color: #6c6c6c;
-$text-color: #e0e0e0;
-$light-bg: #1a1a1a;
-$white: #ffffff;
-$dark-bg: #121212;
+// Color scheme - Nature-inspired Earth Tones
+// New nature palette implementation
+$timberwolf: #dad7cd;        // Light warm beige/grey - for light backgrounds
+$sage: #a3b18a;              // Soft green - for accents and highlights
+$fern-green: #588157;        // Medium green - for primary elements
+$hunter-green: #3a5a40;      // Dark green - for secondary backgrounds
+$brunswick-green: #344e41;   // Darkest green - for primary backgrounds
+
+// Semantic color assignments using the new palette
+$primary-color: $brunswick-green;    // Darkest green for primary backgrounds
+$secondary-color: $hunter-green;     // Dark green for secondary elements
+$accent-color: $sage;                // Soft green for accents and links
+$text-color: $timberwolf;            // Light warm beige for text
+$light-bg: $hunter-green;            // Dark green for lighter sections
+$white: #ffffff;                     // Keep white for high contrast elements
+$dark-bg: $brunswick-green;          // Darkest green for main background
 
 // Typography
 $font-family: 'Roboto Mono', monospace;
@@ -54,7 +62,7 @@ body {
 .hero {
   background: 
     url('../images/pattern.svg'),
-    linear-gradient(135deg, $primary-color 0%, lighten($secondary-color, 5%) 50%, $secondary-color 100%);
+    linear-gradient(135deg, $brunswick-green 0%, $hunter-green 50%, $fern-green 100%);
   background-size: 100px 100px, cover;
   color: $white;
   text-align: center;
@@ -83,15 +91,12 @@ body {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      border: 5px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba($sage, 0.6);
       transition: all 0.4s ease;
-      backdrop-filter: blur(5px);
 
       &:hover {
         transform: scale(1.08);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-        border-color: rgba(255, 255, 255, 0.6);
+        border-color: rgba($sage, 0.8);
       }
     }
   }
@@ -173,7 +178,7 @@ body {
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background: $accent-color;
+        background: $sage;
         border-radius: 2px;
       }
     }
@@ -222,17 +227,17 @@ body {
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  border: 1px solid rgba(108, 108, 108, 0.3);
+  border: 1px solid rgba($sage, 0.3);
   
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border-color: $accent-color;
+    border-color: $sage;
   }
   
   i {
     font-size: 2rem;
-    color: $accent-color;
+    color: $sage;
     margin-bottom: 20px;
     display: block;
   }
